@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Button_add.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
