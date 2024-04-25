@@ -10,7 +10,7 @@ import SwiftUI
 struct LineTextField: View {
     @Binding var txt: String
     @State var title: String = "Title"
-    @state var placholder: String = "Plac"
+    @state var placholder: String = "Placholder"
     var body: some View {
         VStack {
             Text(title)
