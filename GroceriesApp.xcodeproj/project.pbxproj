@@ -25,6 +25,7 @@
 		7F4ACD602BB9FA1700F2D6A3 /* GroceriesAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4ACD5F2BB9FA1700F2D6A3 /* GroceriesAppTests.swift */; };
 		7F4ACD6A2BB9FA1700F2D6A3 /* GroceriesAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4ACD692BB9FA1700F2D6A3 /* GroceriesAppUITests.swift */; };
 		7F4ACD6C2BB9FA1700F2D6A3 /* GroceriesAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4ACD6B2BB9FA1700F2D6A3 /* GroceriesAppUITestsLaunchTests.swift */; };
+		7F7ABB252BDB9B1B00B18539 /* ServiceCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7ABB242BDB9B1B00B18539 /* ServiceCall.swift */; };
 		7FBF535A2BDA3F8F00CBF65C /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBF53592BDA3F8F00CBF65C /* MainViewModel.swift */; };
 		7FBF535C2BDA41C100CBF65C /* LineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBF535B2BDA41C100CBF65C /* LineTextField.swift */; };
 /* End PBXBuildFile section */
@@ -68,6 +69,7 @@
 		7F4ACD652BB9FA1700F2D6A3 /* GroceriesAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GroceriesAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F4ACD692BB9FA1700F2D6A3 /* GroceriesAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceriesAppUITests.swift; sourceTree = "<group>"; };
 		7F4ACD6B2BB9FA1700F2D6A3 /* GroceriesAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceriesAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7F7ABB242BDB9B1B00B18539 /* ServiceCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCall.swift; sourceTree = "<group>"; };
 		7FBF53592BDA3F8F00CBF65C /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		7FBF535B2BDA41C100CBF65C /* LineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -188,6 +190,7 @@
 				7F4316A82BB9FCD400613C35 /* UIExtension.swift */,
 				7F4316AB2BB9FDC300613C35 /* CountryPickerUI.swift */,
 				7FBF535B2BDA41C100CBF65C /* LineTextField.swift */,
+				7F7ABB242BDB9B1B00B18539 /* ServiceCall.swift */,
 			);
 			path = UICommon;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				7F4316A12BB9FB8900613C35 /* WelcomeView.swift in Sources */,
 				7F4316A72BB9FC9000613C35 /* RoundBotton.swift in Sources */,
 				7F4316A92BB9FCD400613C35 /* UIExtension.swift in Sources */,
+				7F7ABB252BDB9B1B00B18539 /* ServiceCall.swift in Sources */,
 				7F4ACD4F2BB9FA1600F2D6A3 /* GroceriesAppApp.swift in Sources */,
 				7FBF535A2BDA3F8F00CBF65C /* MainViewModel.swift in Sources */,
 			);

@@ -15,7 +15,7 @@ struct LoginView: View {
             Image("bottom_bg")
                 .resizable()
                 .scaledToFill()
-                .frame(width: .screenWidth, height: .screenWidth)
+                .frame(width: .screenWidth, height: .screenHeight)
             
             VStack{
                 
@@ -23,27 +23,53 @@ struct LoginView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 40)
-                    .padding(.bottom, .screenWidth * 0.12)
+                    .padding(.bottom, .screenWidth * 0.1)
                 
                 Text("Loging")
                     .font(.customfont(.semibold, fontSize: 26))
                     .foregroundColor(.primaryText)
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                     .padding(.bottom, 4)
+                
                 Text("Enter your emails and password ")
                     .font(.customfont(.semibold, fontSize: 16))
                     .foregroundColor(.secondaryText)
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                     .padding(.bottom, .screenWidth * 0.1)
                 
-                VStack {
-                    Text("Email")
-                        .font(.customfont(.semibold, fontSize: 16))
-                        .foregroundColor(.textTitle)
-                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                    TextField("Enter your email address", text: $loginVM.txtEmail)
-                    Divider()
+                LineTextField( title: "Email", placholder: "Enter your email address",txt: $loginVM.txtEmail, keyboardType: .emailAddress)
+                    .padding(.bottom, .screenWidth * 0.02)
+                
+                LineSecureField(title: "Password", placholder: "Enter your password", txt: $loginVM.txtpassword, isShowPassword: $loginVM.isShowPassword)
+                    .padding(.bottom, .screenWidth * 0.02)
+                
+                
+                Button {
+                    
+                } label: {
+                    Text("Forgot Password?")
+                        .font(.customfont(.medium, fontSize: 14))
+                        .foregroundColor(.primaryText)
                 }
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
+                .padding(.bottom, .screenWidth * 0.03)
+                
+                RoundButton(title: "Log In") {
+                    
+                }
+                
+                .padding(.bottom, .screenWidth * 0.05)
+                
+                HStack {
+                    Text("Don't have an account?")
+                        .font(.customfont(.semibold, fontSize: 14))
+                        .foregroundColor(.primaryText)
+                    
+                    Text("Signup")
+                        .font(.customfont(.semibold, fontSize: 14))
+                        .foregroundColor(.primaryApp)
+                }
+                
                 Spacer()
             }
             .padding(.top, .topInsets + 64)
