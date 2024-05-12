@@ -55,9 +55,8 @@ struct LoginView: View {
                 .padding(.bottom, .screenWidth * 0.03)
                 
                 RoundButton(title: "Log In") {
-                    
+                    loginVM.ServiceCallLogin()
                 }
-                
                 .padding(.bottom, .screenWidth * 0.05)
                 
                 HStack {
@@ -94,6 +93,9 @@ struct LoginView: View {
             .padding(.top, .topInsets)
             .padding(.horizontal, 20)
             
+        }
+        .alert(isPresented: $loginVM.showError) {
+            Alert(title: Text(Globs.AppName), message: Text(loginVM.errorMessage), dismissButton: .default(Text("Ok") ))
         }
         .background(Color.white)
         .navigationTitle("")
