@@ -30,6 +30,9 @@
 		7FB0D4192BF1321300AB97EF /* UIKitExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0D4182BF1321300AB97EF /* UIKitExtension.swift */; };
 		7FBF535A2BDA3F8F00CBF65C /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBF53592BDA3F8F00CBF65C /* MainViewModel.swift */; };
 		7FBF535C2BDA41C100CBF65C /* LineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBF535B2BDA41C100CBF65C /* LineTextField.swift */; };
+		7FC7F9BA2BF204BE00682876 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC7F9B92BF204BE00682876 /* SignUpView.swift */; };
+		7FC7F9BC2BF219A300682876 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC7F9BB2BF219A300682876 /* UserModel.swift */; };
+		7FC7F9BF2BF2392000682876 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC7F9BE2BF2392000682876 /* MainTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +79,9 @@
 		7FB0D4182BF1321300AB97EF /* UIKitExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitExtension.swift; sourceTree = "<group>"; };
 		7FBF53592BDA3F8F00CBF65C /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		7FBF535B2BDA41C100CBF65C /* LineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineTextField.swift; sourceTree = "<group>"; };
+		7FC7F9B92BF204BE00682876 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		7FC7F9BB2BF219A300682876 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		7FC7F9BE2BF2392000682876 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +116,7 @@
 				7F4316A02BB9FB8900613C35 /* WelcomeView.swift */,
 				7F4316A42BB9FC2B00613C35 /* SignInView.swift */,
 				7F4316B12BBA0E8E00613C35 /* LoginView.swift */,
+				7FC7F9B92BF204BE00682876 /* SignUpView.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -204,6 +211,7 @@
 		7F4ACD7A2BB9FA5900F2D6A3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7FC7F9BD2BF238A500682876 /* MainTab */,
 				7F43169F2BB9FB7800613C35 /* Login */,
 			);
 			path = View;
@@ -212,6 +220,7 @@
 		7F4ACD7B2BB9FA5F00F2D6A3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7FC7F9BB2BF219A300682876 /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -230,6 +239,14 @@
 				7FB0D4182BF1321300AB97EF /* UIKitExtension.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		7FC7F9BD2BF238A500682876 /* MainTab */ = {
+			isa = PBXGroup;
+			children = (
+				7FC7F9BE2BF2392000682876 /* MainTabView.swift */,
+			);
+			path = MainTab;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -381,10 +398,13 @@
 				7F4316A12BB9FB8900613C35 /* WelcomeView.swift in Sources */,
 				7FB0D4192BF1321300AB97EF /* UIKitExtension.swift in Sources */,
 				7F4316A72BB9FC9000613C35 /* RoundBotton.swift in Sources */,
+				7FC7F9BC2BF219A300682876 /* UserModel.swift in Sources */,
+				7FC7F9BA2BF204BE00682876 /* SignUpView.swift in Sources */,
 				7F4316A92BB9FCD400613C35 /* UIExtension.swift in Sources */,
 				7F7ABB252BDB9B1B00B18539 /* ServiceCall.swift in Sources */,
 				7F4ACD4F2BB9FA1600F2D6A3 /* GroceriesAppApp.swift in Sources */,
 				7FBF535A2BDA3F8F00CBF65C /* MainViewModel.swift in Sources */,
+				7FC7F9BF2BF2392000682876 /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
