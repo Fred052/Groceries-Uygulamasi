@@ -33,6 +33,9 @@
 		7F8F11992BF4E2C50034A5F2 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8F11982BF4E2C50034A5F2 /* CategoryCell.swift */; };
 		7FB0D4162BF12AF000AB97EF /* Globs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0D4152BF12AF000AB97EF /* Globs.swift */; };
 		7FB0D4192BF1321300AB97EF /* UIKitExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0D4182BF1321300AB97EF /* UIKitExtension.swift */; };
+		7FBD53C22BFCBA8E0029575A /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBD53C12BFCBA8E0029575A /* ProductModel.swift */; };
+		7FBD53C42BFCCA3A0029575A /* TypeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBD53C32BFCCA3A0029575A /* TypeModel.swift */; };
+		7FBD53C72BFCD16C0029575A /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 7FBD53C62BFCD16C0029575A /* SDWebImageSwiftUI */; };
 		7FBF535A2BDA3F8F00CBF65C /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBF53592BDA3F8F00CBF65C /* MainViewModel.swift */; };
 		7FBF535C2BDA41C100CBF65C /* LineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBF535B2BDA41C100CBF65C /* LineTextField.swift */; };
 		7FC7F9BA2BF204BE00682876 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC7F9B92BF204BE00682876 /* SignUpView.swift */; };
@@ -90,6 +93,8 @@
 		7F8F11982BF4E2C50034A5F2 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		7FB0D4152BF12AF000AB97EF /* Globs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globs.swift; sourceTree = "<group>"; };
 		7FB0D4182BF1321300AB97EF /* UIKitExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitExtension.swift; sourceTree = "<group>"; };
+		7FBD53C12BFCBA8E0029575A /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		7FBD53C32BFCCA3A0029575A /* TypeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeModel.swift; sourceTree = "<group>"; };
 		7FBF53592BDA3F8F00CBF65C /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		7FBF535B2BDA41C100CBF65C /* LineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineTextField.swift; sourceTree = "<group>"; };
 		7FC7F9B92BF204BE00682876 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
@@ -105,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FBD53C72BFCD16C0029575A /* SDWebImageSwiftUI in Frameworks */,
 				7F4316AE2BBA007800613C35 /* CountryPicker in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,6 +249,8 @@
 			isa = PBXGroup;
 			children = (
 				7FC7F9BB2BF219A300682876 /* UserModel.swift */,
+				7FBD53C12BFCBA8E0029575A /* ProductModel.swift */,
+				7FBD53C32BFCCA3A0029575A /* TypeModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -307,6 +315,7 @@
 			name = GroceriesApp;
 			packageProductDependencies = (
 				7F4316AD2BBA007800613C35 /* CountryPicker */,
+				7FBD53C62BFCD16C0029575A /* SDWebImageSwiftUI */,
 			);
 			productName = GroceriesApp;
 			productReference = 7F4ACD4B2BB9FA1600F2D6A3 /* GroceriesApp.app */;
@@ -382,6 +391,7 @@
 			mainGroup = 7F4ACD422BB9FA1600F2D6A3;
 			packageReferences = (
 				7F4316AA2BB9FD2D00613C35 /* XCRemoteSwiftPackageReference "CountryPicker" */,
+				7FBD53C52BFCD16C0029575A /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = 7F4ACD4C2BB9FA1600F2D6A3 /* Products */;
 			projectDirPath = "";
@@ -437,6 +447,8 @@
 				7F4316B22BBA0E8E00613C35 /* LoginView.swift in Sources */,
 				7FE4B3212BF383060003F800 /* HomeViewModel.swift in Sources */,
 				7FB0D4162BF12AF000AB97EF /* Globs.swift in Sources */,
+				7FBD53C42BFCCA3A0029575A /* TypeModel.swift in Sources */,
+				7FBD53C22BFCBA8E0029575A /* ProductModel.swift in Sources */,
 				7FE4B3242BF383F10003F800 /* HomeView.swift in Sources */,
 				7F4316A52BB9FC2B00613C35 /* SignInView.swift in Sources */,
 				7F4316A12BB9FB8900613C35 /* WelcomeView.swift in Sources */,
@@ -810,6 +822,14 @@
 				minimumVersion = 2.0.3;
 			};
 		};
+		7FBD53C52BFCD16C0029575A /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.4;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -817,6 +837,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7F4316AA2BB9FD2D00613C35 /* XCRemoteSwiftPackageReference "CountryPicker" */;
 			productName = CountryPicker;
+		};
+		7FBD53C62BFCD16C0029575A /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7FBD53C52BFCD16C0029575A /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
