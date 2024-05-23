@@ -49,12 +49,12 @@ struct HomeView: View {
                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     LazyHStack(spacing: 15) {
-                        ForEach (0...5, id: \.self) {
-                            index in 
+                        ForEach (homeVm.offerArr, id: \.id) {
+                            pObj in
                             
-                            ProductCell {
-                                
-                            }
+                            ProductCell(pObj: pObj, didAddCart: {
+                                    
+                            })
                         }
                     }
                     .padding(.horizontal, 20)
@@ -68,12 +68,12 @@ struct HomeView: View {
                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     LazyHStack(spacing: 15) {
-                        ForEach (0...5, id: \.self) {
-                            index in
+                        ForEach (homeVm.bestArr, id: \.id) {
+                            pObj in
                             
-                            ProductCell {
-                                
-                            }
+                            ProductCell(pObj: pObj, didAddCart: {
+                                    
+                            })
                         }
                     }
                     .padding(.horizontal, 20)
@@ -87,11 +87,11 @@ struct HomeView: View {
                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     LazyHStack(spacing: 15) {
-                        ForEach (0...5, id: \.self) {
-                            index in
+                        ForEach (homeVm.typeArr, id: \.id) {
+                            tObj in
                             
-                            CategoryCell(color: Color(hex: "F8A44C")) {
-                                
+                            CategoryCell(tObj: tObj) {
+                                    
                             }
                         }
                     }
@@ -102,12 +102,12 @@ struct HomeView: View {
                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     LazyHStack(spacing: 15) {
-                        ForEach (0...5, id: \.self) {
-                            index in
+                        ForEach (homeVm.listArr, id: \.id) {
+                            pObj in
                             
-                            ProductCell {
-                                
-                            }
+                            ProductCell(pObj: pObj, didAddCart: {
+                                    
+                            })
                         }
                     }
                     .padding(.horizontal, 20)

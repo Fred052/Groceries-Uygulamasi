@@ -20,7 +20,7 @@ class HomeViewModel: ObservableObject
     @Published var offerArr: [ProductModel] = []
     @Published var bestArr: [ProductModel] = []
     @Published var listArr: [ProductModel] = []
-    @Published var typeArr: [ProductModel] = []
+    @Published var typeArr: [TypeModel] = []
     
     
     init() {
@@ -49,7 +49,7 @@ class HomeViewModel: ObservableObject
                         })
                         
                         self.typeArr = (payloadObj.value(forKey: "type_list") as? NSArray ?? []).map({ obj in
-                            return ProductModel(dict: obj as? NSDictionary ?? [:])
+                            return TypeModel(dict: obj as? NSDictionary ?? [:])
                         })
                     }
                     
