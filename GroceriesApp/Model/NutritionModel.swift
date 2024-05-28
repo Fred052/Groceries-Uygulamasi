@@ -1,0 +1,26 @@
+//
+//  NutritionModel.swift
+//  GroceriesApp
+//
+//  Created by Ferid Suleymanzade on 26.05.24.
+//
+
+import SwiftUI
+
+struct NutritionModel: Identifiable, Equatable {
+    
+    var id: Int = 0
+    var nutritionName: String = ""
+    var nutritionValue: String = ""
+    
+    init(dict: NSDictionary) {
+        self.id = dict.value(forKey: "nutrition_id") as? Int ?? 0
+        self.nutritionName = dict.value(forKey: "nutrition_name") as? String ?? ""
+        self.nutritionValue = dict.value(forKey: "nutrition_value") as? String ?? ""
+    }
+   
+    static func == (lhs: NutritionModel, rhs: NutritionModel) -> Bool {
+        return lhs.id == rhs.id
+        
+    }
+}
