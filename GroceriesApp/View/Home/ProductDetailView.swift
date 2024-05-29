@@ -62,8 +62,18 @@ struct ProductDetailView: View {
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 25, height: 25)
-                                .padding(15)
+                                .padding(10)
                         }
+                        
+                        Text("\(detailVm.qty)")
+                            .font(.customfont(.bold, fontSize: 24))
+                            .foregroundColor(.primaryText)
+                            .multilineTextAlignment(.center)
+                            .frame(width: 45, height: 45, alignment: .center)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 16)
+                                    .stroke( Color.placeHolder.opacity(0.5), lineWidth: 1)
+                                )
                         
                         
                         Button{
@@ -73,7 +83,7 @@ struct ProductDetailView: View {
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 25, height: 25)
-                                .padding(15)
+                                .padding(10)
                         }
                         
                         Spacer()
@@ -82,9 +92,144 @@ struct ProductDetailView: View {
                             .foregroundColor(.primaryText)
                  
                     }
+                    .padding(.vertical, 8)
+                    
+                    Divider()
                 }
                 .padding(.horizontal, 20)
-                .padding(.vertical, 20)
+                .padding(.top, 20)
+                
+                VStack {
+                    HStack {
+                        Text("Ürün Detayları")
+                            .font(.customfont(.semibold, fontSize: 16))
+                            .foregroundColor(.primaryText)
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                        Button{
+                            withAnimation {
+                                detailVm.showDetail()
+                            }
+                           
+                        }label: {
+                            Image(detailVm.isShowDetail ? "Next" : "detail_open")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 15, height: 15 )
+                                .padding(15)
+                        }
+                        .foregroundColor(Color.primaryText)
+                    }
+                    
+                    if(detailVm.isShowDetail) {
+                        Text(detailVm.pObj.detail)
+                            .font(.customfont(.medium, fontSize: 13))
+                            .foregroundColor(.secondaryText)
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                            .padding(.bottom, 8)
+                    }
+                  
+                    
+                    
+                    Divider()
+                }
+                .padding(.horizontal, 20)
+                
+                
+                
+                VStack {
+                    HStack {
+                        Text("Besin Değerler")
+                            .font(.customfont(.semibold, fontSize: 16))
+                            .foregroundColor(.primaryText)
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                        
+                        Text(detailVm.pObj.nutritionWeight)
+                            .font(.customfont(.semibold, fontSize: 10))
+                            .foregroundColor(.secondaryText)
+                            .padding(8)
+                            .background(Color.placeHolder.opacity(0.5))
+                            .cornerRadius(5)
+                          
+                        
+                        Button{
+                            withAnimation {
+                                detailVm.showNutrition()
+                            }
+                           
+                        }label: {
+                            Image(detailVm.isShowNutrition ? "Next" : "detail_open")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 15, height: 15 )
+                                .padding(15)
+                        }
+                        .foregroundColor(Color.primaryText)
+                    }
+                    
+                    if(detailVm.isShowNutrition) {
+                        LazyVStack {
+                            ForEach(detailVm.nutritionArr, id: \.id) { nObj in
+                                HStack {
+                                    Text(nObj.nutritionName)
+                                        .font(.customfont(.semibold, fontSize: 15))
+                                        .foregroundColor(.secondaryText)
+                                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                                    
+                                    Text(nObj.nutritionValue)
+                                        .font(.customfont(.semibold, fontSize: 15))
+                                        .foregroundColor(.primaryText)
+                                }
+                                Divider()
+                            }
+                            .padding(.vertical, 0)
+                        }
+                        .padding(.horizontal,20)
+                    }
+                  
+                    
+                    
+                    Divider()
+                }
+                .padding(.horizontal, 20)
+                
+                
+                HStack {
+                    Text("Değerlendirme")
+                        .font(.customfont(.semibold, fontSize: 16))
+                        .foregroundColor(.primaryText)
+                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                    HStack(spacing: 2){
+                        ForEach(1...5, id: \.self) { index in
+                            Image(systemName: "star.fill")
+                                .resizable()
+                                .scaledToFit()
+                                .foregroundColor(Color.orange)
+                                .frame(width: 15, height: 15)
+                        }
+                    }
+                    
+                    Divider()
+                   
+                    
+                    Button{
+                       
+                    }label: {
+                        Image("detail_open")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 15, height: 15 )
+                            .padding(15)
+                    }
+                    .foregroundColor(Color.primaryText)
+                }
+                .padding(.horizontal, 20)
+                
+                RoundButton(title: "Sepete Ekle") {
+                        
+                }
+                .padding(20)
+                
+                
             }
             
             VStack {

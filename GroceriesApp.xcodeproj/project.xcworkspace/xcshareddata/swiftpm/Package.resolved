@@ -1,13 +1,13 @@
 {
-  "originHash" : "8d8ab3a13a208621905190aaae9e3b268db198bdce2ea3711ca78873911e6aab",
+  "originHash" : "80545e565aa54477b51a7458740cf5b1bff90b081928e0d8325971a9a63e634e",
   "pins" : [
     {
       "identity" : "countrypicker",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/mobven/CountryPicker.git",
       "state" : {
-        "revision" : "6225c2933fea6abdb8171718b22bbe289706a7aa",
-        "version" : "2.0.3"
+        "revision" : "3632e53eb077a29e2b6418a5d74bad13ce439e38",
+        "version" : "1.0.7"
       }
     },
     {

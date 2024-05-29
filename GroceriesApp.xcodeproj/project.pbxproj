@@ -16,7 +16,6 @@
 		7F4316A72BB9FC9000613C35 /* RoundBotton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4316A62BB9FC9000613C35 /* RoundBotton.swift */; };
 		7F4316A92BB9FCD400613C35 /* UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4316A82BB9FCD400613C35 /* UIExtension.swift */; };
 		7F4316AC2BB9FDC300613C35 /* CountryPickerUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4316AB2BB9FDC300613C35 /* CountryPickerUI.swift */; };
-		7F4316AE2BBA007800613C35 /* CountryPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 7F4316AD2BBA007800613C35 /* CountryPicker */; };
 		7F4316B02BBA059A00613C35 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F4316AF2BBA059A00613C35 /* Launch Screen.storyboard */; };
 		7F4316B22BBA0E8E00613C35 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4316B12BBA0E8E00613C35 /* LoginView.swift */; };
 		7F4ACD4F2BB9FA1600F2D6A3 /* GroceriesAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4ACD4E2BB9FA1600F2D6A3 /* GroceriesAppApp.swift */; };
@@ -25,6 +24,7 @@
 		7F4ACD602BB9FA1700F2D6A3 /* GroceriesAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4ACD5F2BB9FA1700F2D6A3 /* GroceriesAppTests.swift */; };
 		7F4ACD6A2BB9FA1700F2D6A3 /* GroceriesAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4ACD692BB9FA1700F2D6A3 /* GroceriesAppUITests.swift */; };
 		7F4ACD6C2BB9FA1700F2D6A3 /* GroceriesAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4ACD6B2BB9FA1700F2D6A3 /* GroceriesAppUITestsLaunchTests.swift */; };
+		7F6DEEEC2C06F92F0099E3DE /* CountryPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 7F6DEEEB2C06F92F0099E3DE /* CountryPicker */; };
 		7F7ABB252BDB9B1B00B18539 /* ServiceCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7ABB242BDB9B1B00B18539 /* ServiceCall.swift */; };
 		7F8F11912BF4C7850034A5F2 /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8F11902BF4C7850034A5F2 /* TabButton.swift */; };
 		7F8F11932BF4CFF90034A5F2 /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8F11922BF4CFF90034A5F2 /* SearchTextField.swift */; };
@@ -119,7 +119,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FBD53C72BFCD16C0029575A /* SDWebImageSwiftUI in Frameworks */,
-				7F4316AE2BBA007800613C35 /* CountryPicker in Frameworks */,
+				7F6DEEEC2C06F92F0099E3DE /* CountryPicker in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,8 +326,8 @@
 			);
 			name = GroceriesApp;
 			packageProductDependencies = (
-				7F4316AD2BBA007800613C35 /* CountryPicker */,
 				7FBD53C62BFCD16C0029575A /* SDWebImageSwiftUI */,
+				7F6DEEEB2C06F92F0099E3DE /* CountryPicker */,
 			);
 			productName = GroceriesApp;
 			productReference = 7F4ACD4B2BB9FA1600F2D6A3 /* GroceriesApp.app */;
@@ -402,8 +402,8 @@
 			);
 			mainGroup = 7F4ACD422BB9FA1600F2D6A3;
 			packageReferences = (
-				7F4316AA2BB9FD2D00613C35 /* XCRemoteSwiftPackageReference "CountryPicker" */,
 				7FBD53C52BFCD16C0029575A /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				7F6DEEEA2C06F92F0099E3DE /* XCRemoteSwiftPackageReference "CountryPicker" */,
 			);
 			productRefGroup = 7F4ACD4C2BB9FA1600F2D6A3 /* Products */;
 			projectDirPath = "";
@@ -830,12 +830,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		7F4316AA2BB9FD2D00613C35 /* XCRemoteSwiftPackageReference "CountryPicker" */ = {
+		7F6DEEEA2C06F92F0099E3DE /* XCRemoteSwiftPackageReference "CountryPicker" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mobven/CountryPicker.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.3;
+				kind = versionRange;
+				maximumVersion = 1.0.9;
+				minimumVersion = 1.0.0;
 			};
 		};
 		7FBD53C52BFCD16C0029575A /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
@@ -849,9 +850,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		7F4316AD2BBA007800613C35 /* CountryPicker */ = {
+		7F6DEEEB2C06F92F0099E3DE /* CountryPicker */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 7F4316AA2BB9FD2D00613C35 /* XCRemoteSwiftPackageReference "CountryPicker" */;
+			package = 7F6DEEEA2C06F92F0099E3DE /* XCRemoteSwiftPackageReference "CountryPicker" */;
 			productName = CountryPicker;
 		};
 		7FBD53C62BFCD16C0029575A /* SDWebImageSwiftUI */ = {
