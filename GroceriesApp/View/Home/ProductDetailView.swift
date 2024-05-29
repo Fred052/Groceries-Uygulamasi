@@ -38,7 +38,8 @@ struct ProductDetailView: View {
                             .foregroundColor(.primaryText)
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                         Button{
-                            detailVm.isFav = !detailVm.isFav
+                            
+                            detailVm.serviceCallAddRemovefav()
                         }label: {
                             Image(detailVm.isFav ? "favorite" : "fav")
                                 .resizable()
@@ -111,7 +112,7 @@ struct ProductDetailView: View {
                             }
                            
                         }label: {
-                            Image(detailVm.isShowDetail ? "Next" : "detail_open")
+                            Image(detailVm.isShowDetail ? "detail_open" : "next" )
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 15, height: 15 )
@@ -157,7 +158,7 @@ struct ProductDetailView: View {
                             }
                            
                         }label: {
-                            Image(detailVm.isShowNutrition ? "Next" : "detail_open")
+                            Image(detailVm.isShowNutrition ? "detail_open" : "next")
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 15, height: 15 )
@@ -208,13 +209,10 @@ struct ProductDetailView: View {
                         }
                     }
                     
-                    Divider()
-                   
-                    
                     Button{
                        
                     }label: {
-                        Image("detail_open")
+                        Image("next")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 15, height: 15 )
@@ -258,6 +256,9 @@ struct ProductDetailView: View {
             .padding(.horizontal, 20)
             
         }
+        .alert(isPresented: $detailVm.showError, content: {
+            Alert(title: Text(Globs.AppName), message:  Text(detailVm.errorMessage), dismissButton: .default(Text("Ok")))
+        })
         .navigationTitle("")
         .navigationBarBackButtonHidden(true)
         .navigationBarHidden(true)

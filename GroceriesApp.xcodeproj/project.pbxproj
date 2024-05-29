@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F0DBDC02C0701A400E4E8CF /* FavouriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0DBDBF2C0701A400E4E8CF /* FavouriteView.swift */; };
+		7F0DBDC22C07040C00E4E8CF /* FavoutireViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0DBDC12C07040C00E4E8CF /* FavoutireViewModel.swift */; };
 		7F43169A2BB9FAC200613C35 /* Gilroy-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F4316962BB9FAC200613C35 /* Gilroy-SemiBold.ttf */; };
 		7F43169B2BB9FAC200613C35 /* Gilroy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F4316972BB9FAC200613C35 /* Gilroy-Regular.ttf */; };
 		7F43169C2BB9FAC200613C35 /* Gilroy-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F4316982BB9FAC200613C35 /* Gilroy-Bold.ttf */; };
@@ -48,6 +50,7 @@
 		7FE4B3212BF383060003F800 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE4B3202BF383060003F800 /* HomeViewModel.swift */; };
 		7FE4B3242BF383F10003F800 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE4B3232BF383F10003F800 /* HomeView.swift */; };
 		7FE4B3282BF384C10003F800 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE4B3272BF384C10003F800 /* ExploreView.swift */; };
+		7FE5693E2C07198D00B71135 /* FavouriteRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE5693D2C07198D00B71135 /* FavouriteRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +71,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7F0DBDBF2C0701A400E4E8CF /* FavouriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteView.swift; sourceTree = "<group>"; };
+		7F0DBDC12C07040C00E4E8CF /* FavoutireViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoutireViewModel.swift; sourceTree = "<group>"; };
 		7F4316962BB9FAC200613C35 /* Gilroy-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-SemiBold.ttf"; sourceTree = "<group>"; };
 		7F4316972BB9FAC200613C35 /* Gilroy-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Regular.ttf"; sourceTree = "<group>"; };
 		7F4316982BB9FAC200613C35 /* Gilroy-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Bold.ttf"; sourceTree = "<group>"; };
@@ -111,6 +116,7 @@
 		7FE4B3202BF383060003F800 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		7FE4B3232BF383F10003F800 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		7FE4B3272BF384C10003F800 /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
+		7FE5693D2C07198D00B71135 /* FavouriteRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +146,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F0DBDBE2C07016C00E4E8CF /* Favourite */ = {
+			isa = PBXGroup;
+			children = (
+				7F0DBDBF2C0701A400E4E8CF /* FavouriteView.swift */,
+			);
+			path = Favourite;
+			sourceTree = "<group>";
+		};
 		7F43169F2BB9FB7800613C35 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +253,7 @@
 				7F8F11942BF4D9F50034A5F2 /* SectionTitleAll.swift */,
 				7F8F11962BF4DC950034A5F2 /* ProductCell.swift */,
 				7F8F11982BF4E2C50034A5F2 /* CategoryCell.swift */,
+				7FE5693D2C07198D00B71135 /* FavouriteRow.swift */,
 			);
 			path = UICommon;
 			sourceTree = "<group>";
@@ -246,6 +261,8 @@
 		7F4ACD7A2BB9FA5900F2D6A3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7F0DBDBE2C07016C00E4E8CF /* Favourite */,
+				7FE4B3252BF384A90003F800 /* Explore */,
 				7FE4B3222BF383DA0003F800 /* Home */,
 				7FC7F9BD2BF238A500682876 /* MainTab */,
 				7F43169F2BB9FB7800613C35 /* Login */,
@@ -271,6 +288,7 @@
 				7FBF53592BDA3F8F00CBF65C /* MainViewModel.swift */,
 				7FE4B3202BF383060003F800 /* HomeViewModel.swift */,
 				7FE0AE1C2C037C0E0011F1DC /* ProductDetailViewModel.swift */,
+				7F0DBDC12C07040C00E4E8CF /* FavoutireViewModel.swift */,
 			);
 			path = ModelView;
 			sourceTree = "<group>";
@@ -294,7 +312,6 @@
 		7FE4B3222BF383DA0003F800 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				7FE4B3252BF384A90003F800 /* Explore */,
 				7FE4B3232BF383F10003F800 /* HomeView.swift */,
 				7FE0AE1A2C037A2F0011F1DC /* ProductDetailView.swift */,
 			);
@@ -466,6 +483,7 @@
 				7F4316A12BB9FB8900613C35 /* WelcomeView.swift in Sources */,
 				7FB0D4192BF1321300AB97EF /* UIKitExtension.swift in Sources */,
 				7F4316A72BB9FC9000613C35 /* RoundBotton.swift in Sources */,
+				7F0DBDC22C07040C00E4E8CF /* FavoutireViewModel.swift in Sources */,
 				7FE4B3282BF384C10003F800 /* ExploreView.swift in Sources */,
 				7FC7F9BC2BF219A300682876 /* UserModel.swift in Sources */,
 				7F8F11912BF4C7850034A5F2 /* TabButton.swift in Sources */,
@@ -474,8 +492,10 @@
 				7FE0AE212C037ECD0011F1DC /* ImageModel.swift in Sources */,
 				7F8F11952BF4D9F50034A5F2 /* SectionTitleAll.swift in Sources */,
 				7FE0AE1F2C037DC90011F1DC /* NutritionModel.swift in Sources */,
+				7F0DBDC02C0701A400E4E8CF /* FavouriteView.swift in Sources */,
 				7F8F11932BF4CFF90034A5F2 /* SearchTextField.swift in Sources */,
 				7F7ABB252BDB9B1B00B18539 /* ServiceCall.swift in Sources */,
+				7FE5693E2C07198D00B71135 /* FavouriteRow.swift in Sources */,
 				7F4ACD4F2BB9FA1600F2D6A3 /* GroceriesAppApp.swift in Sources */,
 				7FE0AE1B2C037A2F0011F1DC /* ProductDetailView.swift in Sources */,
 				7FBF535A2BDA3F8F00CBF65C /* MainViewModel.swift in Sources */,
