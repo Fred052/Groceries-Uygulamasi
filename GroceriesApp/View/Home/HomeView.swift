@@ -53,6 +53,11 @@ struct HomeView: View {
                             pObj in
                             
                             ProductCell(pObj: pObj, didAddCart: {
+                                
+                                CartViewModel.serviceCallAddToCart(prodId: pObj.prodId, qty: 1) { isDone, msg in
+                                    self.homeVm.errorMessage = msg
+                                    self.homeVm.showError = true
+                                }
                                     
                             })
                         }
@@ -106,7 +111,10 @@ struct HomeView: View {
                             pObj in
                             
                             ProductCell(pObj: pObj, didAddCart: {
-                                    
+                                CartViewModel.serviceCallAddToCart(prodId: pObj.prodId, qty: 1) { isDone, msg in
+                                    self.homeVm.errorMessage = msg
+                                    self.homeVm.showError = true
+                                }
                             })
                         }
                     }
@@ -116,11 +124,18 @@ struct HomeView: View {
                 .padding(.bottom, .bottomInsets + 60)
             }
         }
-        
+        .alert(isPresented: $homeVm.showError, content: {
+            Alert(title: Text(Globs.AppName), message: Text(homeVm.errorMessage), dismissButton: .default(Text("Ok")))
+        })
         .ignoresSafeArea()
     }
 }
 
-#Preview {
-    HomeView()
+struct HomeView_Previews: PreviewProvider {
+    static var previews: some View {
+        NavigationView {
+            HomeView()
+        }
+    }
+
 }

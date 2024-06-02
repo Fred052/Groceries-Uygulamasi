@@ -223,7 +223,13 @@ struct ProductDetailView: View {
                 .padding(.horizontal, 20)
                 
                 RoundButton(title: "Sepete Ekle") {
+                    CartViewModel.serviceCallAddToCart(prodId: detailVm.pObj.prodId, qty: detailVm.qty) { isDone, msg in
                         
+                        detailVm.qty = 1
+                        
+                        self.detailVm.errorMessage = msg
+                        self.detailVm.showError = true
+                    }
                 }
                 .padding(20)
                 

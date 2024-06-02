@@ -18,7 +18,7 @@ struct MainTabView: View {
             }else if(homeVM.selectTab == 1) {
                 ExploreView()
             }else if(homeVM.selectTab == 2) {
-                ExploreView()
+                MyCartView()
             }else if(homeVM.selectTab == 3) {
                 FavouriteView()
             }else if(homeVM.selectTab == 4) {
@@ -90,6 +90,11 @@ struct MainTabView: View {
     }
 }
 
-#Preview {
-    MainTabView()
+struct MainTabView_Previews: PreviewProvider {
+    static var previews: some View {
+        NavigationView {
+            MainTabView()
+        }
+    }
+
 }

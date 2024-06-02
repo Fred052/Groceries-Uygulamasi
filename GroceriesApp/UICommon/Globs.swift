@@ -22,6 +22,11 @@ struct Globs{
     static let SV_ADD_REMOVE_FAVORITE = BASE_URL + "add_remove_favorite"
     static let SV_FAVORITE_LIST = BASE_URL + "favorite_list"
     
+    static let SV_ADD_CART = BASE_URL + "add_to_cart"
+    static let SV_UPDATE_CART = BASE_URL + "update_cart"
+    static let SV_REMOVE_CART = BASE_URL + "remove_cart"
+    static let SV_CART_LIST = BASE_URL + "cart_list"
+    
     static let SV_EXPLORE_LIST = BASE_URL + "explore_category_list"
     static let SV_EXPLORE_ITEMS_LIST = BASE_URL + "explore_category_items_list"
 }
