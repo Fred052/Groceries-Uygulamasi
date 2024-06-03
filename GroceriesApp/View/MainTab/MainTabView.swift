@@ -22,7 +22,7 @@ struct MainTabView: View {
             }else if(homeVM.selectTab == 3) {
                 FavouriteView()
             }else if(homeVM.selectTab == 4) {
-                ExploreView()
+                AccountView()
             }
             VStack {
                 

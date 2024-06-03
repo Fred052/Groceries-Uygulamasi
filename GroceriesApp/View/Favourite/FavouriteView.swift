@@ -54,9 +54,6 @@ struct FavouriteView: View {
         .onAppear{
             favVm.serviceCallList()
         }
-        .navigationTitle("")
-        .navigationBarBackButtonHidden(true)
-        .navigationBarHidden(true)
         .ignoresSafeArea()
     }
 }

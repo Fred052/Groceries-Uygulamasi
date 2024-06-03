@@ -35,6 +35,11 @@ class MainViewModel: ObservableObject {
         #endif
     }
     
+    func logout() {
+        Utils.UDSET(data: false, key: Globs.userLogin)
+        isUserLogin = false
+    }
+    
     //Mark: ServiceCall
     func ServiceCallLogin() {
         
