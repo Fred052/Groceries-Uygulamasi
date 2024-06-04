@@ -49,12 +49,26 @@ struct AccountView: View {
                             AccountRow(title: "Siparişler", icon: "a_order")
                             
                             AccountRow(title: "Hesabım", icon: "a_my_detail")
+                            NavigationLink {
+                                DeliveryAddressView()
+                            } label: {
+                                AccountRow(title: "Teslimat Adresi", icon: "a_delivery_address")
+                            }
+
+                            NavigationLink {
+                               PaymentMethodsView()
+                            } label: {
+                                AccountRow(title: "Ödeme Yöntemleri", icon: "paymenth_methods")
+                            }
                             
-                            AccountRow(title: "Teslimat Adresi", icon: "a_delivery_address")
+                           
                             
-                            AccountRow(title: "Ödeme Yöntemleri", icon: "paymenth_methods")
+                            NavigationLink {
+                                PromoCodeView()
+                            } label: {
+                                AccountRow(title: "İndirim Kodu", icon: "a_promocode")
+                            }
                             
-                            AccountRow(title: "İndirim Kodu", icon: "a_promocode")
                            
                         }
                         
@@ -101,6 +115,11 @@ struct AccountView: View {
     }
 }
 
-#Preview {
-    AccountView()
+struct AccountView_Previews: PreviewProvider {
+    static var previews: some View {
+        NavigationView {
+            AccountView()
+        }
+    }
+
 }

@@ -53,9 +53,11 @@ struct DeliveryAddressView: View {
                             }
                             
                             VStack {
-                                Button{
-                                    
-                                }label: {
+                                
+                                Spacer()
+                                NavigationLink {
+                                    AddDeliveryAddressView(isEdit: true, editObj: aObj)
+                                } label: {
                                     Image(systemName: "pencil")
                                         .resizable()
                                         .foregroundColor(.primaryApp)
@@ -63,8 +65,9 @@ struct DeliveryAddressView: View {
                                 }
                                 .padding(.bottom, 8)
                                 
+                            
                                 Button{
-                                    
+                                    addressVM.serviceCallRemove(cObj: aObj)
                                 }label: {
                                     Image("close")
                                         .resizable()
@@ -88,44 +91,47 @@ struct DeliveryAddressView: View {
                 
         }
             
-            VStack {
-                HStack {
-                    Button{
-                        mode.wrappedValue.dismiss()
-                    }label: {
-                        Image("back")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 20, height: 20)
+                VStack {
+                    HStack {
+                        Button{
+                            mode.wrappedValue.dismiss()
+                        }label: {
+                            Image("back")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 20, height: 20)
+                        }
+                        .foregroundColor(.primaryText)
+                        
+                        
+                        Spacer()
+                        
+                        Text("Teslimat Adresi")
+                            .font(.customfont(.bold, fontSize: 20))
+                            .frame(height: 46)
+                            Spacer()
+                        
+                        NavigationLink {
+                            AddDeliveryAddressView()
+                        } label: {
+                            Image("add_temp")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 20, height: 20)
+                        }
+                        .foregroundColor(.primaryText)
+                        .padding(.bottom, 8)
+                      
+                        
                     }
-                    .foregroundColor(.primaryText)
+                    .padding(.top, .topInsets)
+                    .padding(.horizontal, 20)
+                    .background(Color.white)
+                    .shadow(color: Color.black.opacity(0.2), radius: 2)
                     
                     
                     Spacer()
                     
-                    Text("Teslimat Adresi")
-                        .font(.customfont(.bold, fontSize: 20))
-                        .frame(height: 46)
-                        Spacer()
-                    
-                    Button{
-                        mode.wrappedValue.dismiss()
-                    }label: {
-                        Image("add_temp")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 20, height: 20)
-                    }
-                    .foregroundColor(.primaryText)
-                }
-                .padding(.top, .topInsets)
-                .padding(.horizontal, 20)
-                .background(Color.white)
-                .shadow(color: Color.black.opacity(0.2), radius: 2)
-                
-                
-                Spacer()
-                
             }
            
         }
@@ -135,12 +141,15 @@ struct DeliveryAddressView: View {
         .navigationTitle("")
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)
-        
-        
         .ignoresSafeArea()
     }
 }
+struct DeliveryAddressView_Previews: PreviewProvider {
+    static var previews: some View {
+        NavigationView {
+            DeliveryAddressView()
+        }
+    }
 
-#Preview {
-    DeliveryAddressView()
 }
+
