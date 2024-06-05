@@ -45,7 +45,7 @@ struct FavouriteView: View {
                 
                 Spacer()
                 
-                RoundButton(title: "Kart Ekle")
+                RoundButton(title: "Favorilere Ekle")
                     .padding(.horizontal,20)
                     .padding(.bottom, .bottomInsets + 80)
             }

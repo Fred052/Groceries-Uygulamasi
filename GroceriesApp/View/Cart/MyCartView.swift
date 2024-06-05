@@ -49,7 +49,7 @@ struct MyCartView: View {
                 Spacer()
                 if(cartVm.listArr.count > 0) {
                     Button{
-
+                        cartVm.showCheckout = true
                     } label: {
                         ZStack {
                             Text("Sepeti Onayla")
@@ -79,13 +79,27 @@ struct MyCartView: View {
                 }
                 
             }
+            if(cartVm.showCheckout) {
+                Color.black
+                    .opacity(0.3)
+                    .ignoresSafeArea()
+                    .onTapGesture {
+                        withAnimation {
+                            cartVm.showCheckout = false
+                        }
+                    }
+                CheckOutView(isShow: $cartVm.showCheckout)
+                    .transition(.opacity.combined(with: .move(edge: .bottom)))
+            }
         }
         .onAppear {
             cartVm.serviceCallList()
         }
+        
         .alert(isPresented: $cartVm.showError, content: {
             Alert(title: Text(Globs.AppName), message: Text(cartVm.errorMessage), dismissButton: .default(Text("Ok")))
         })
+        .animation(.easeInOut, value: cartVm.showCheckout)
         .ignoresSafeArea()
     }
 }

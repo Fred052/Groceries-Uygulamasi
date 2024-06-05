@@ -35,6 +35,7 @@
 		7F6D62012C0F27CF004D7636 /* PaymentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6D62002C0F27CF004D7636 /* PaymentModel.swift */; };
 		7F6D62032C0F2B42004D7636 /* PaymentMethodsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6D62022C0F2B42004D7636 /* PaymentMethodsView.swift */; };
 		7F6D62052C0F3025004D7636 /* AddPaymentMethodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6D62042C0F3025004D7636 /* AddPaymentMethodView.swift */; };
+		7F6D62072C0F4013004D7636 /* CheckOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6D62062C0F4013004D7636 /* CheckOutView.swift */; };
 		7F6DEEEC2C06F92F0099E3DE /* CountryPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 7F6DEEEB2C06F92F0099E3DE /* CountryPicker */; };
 		7F7ABB252BDB9B1B00B18539 /* ServiceCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7ABB242BDB9B1B00B18539 /* ServiceCall.swift */; };
 		7F8F11912BF4C7850034A5F2 /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8F11902BF4C7850034A5F2 /* TabButton.swift */; };
@@ -125,6 +126,7 @@
 		7F6D62002C0F27CF004D7636 /* PaymentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentModel.swift; sourceTree = "<group>"; };
 		7F6D62022C0F2B42004D7636 /* PaymentMethodsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodsView.swift; sourceTree = "<group>"; };
 		7F6D62042C0F3025004D7636 /* AddPaymentMethodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPaymentMethodView.swift; sourceTree = "<group>"; };
+		7F6D62062C0F4013004D7636 /* CheckOutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutView.swift; sourceTree = "<group>"; };
 		7F7ABB242BDB9B1B00B18539 /* ServiceCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCall.swift; sourceTree = "<group>"; };
 		7F8F11902BF4C7850034A5F2 /* TabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
 		7F8F11922BF4CFF90034A5F2 /* SearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
@@ -378,6 +380,7 @@
 			isa = PBXGroup;
 			children = (
 				7FC60B662C07B48D00149FA0 /* MyCartView.swift */,
+				7F6D62062C0F4013004D7636 /* CheckOutView.swift */,
 			);
 			path = Cart;
 			sourceTree = "<group>";
@@ -582,6 +585,7 @@
 				7FE4B3282BF384C10003F800 /* ExploreView.swift in Sources */,
 				7FC7F9BC2BF219A300682876 /* UserModel.swift in Sources */,
 				7F6D62012C0F27CF004D7636 /* PaymentModel.swift in Sources */,
+				7F6D62072C0F4013004D7636 /* CheckOutView.swift in Sources */,
 				7F6D61FF2C0F27BD004D7636 /* PaymentViewModel.swift in Sources */,
 				7F370F132C07459900180ACC /* ExploreItemViewModel.swift in Sources */,
 				7F8F11912BF4C7850034A5F2 /* TabButton.swift in Sources */,

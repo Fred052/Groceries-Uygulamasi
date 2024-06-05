@@ -11,6 +11,9 @@ struct PaymentMethodsView: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     
     @StateObject var payVM = PaymentViewModel.shared
+    @State var isPicker: Bool = false
+    var didSelect:((_ obj: PaymentModel) -> () )?
+    
     var body: some View {
         ZStack {
             
@@ -56,6 +59,13 @@ struct PaymentMethodsView: View {
                         .background(Color.white)
                         .cornerRadius(5)
                         .shadow(color: Color.black.opacity(0.15), radius: 2)
+                        .onTapGesture {
+                            if(isPicker) {
+                                mode.wrappedValue.dismiss()
+                                didSelect?(pObj)
+                            }
+                           
+                        }
                        
                         
                     })
