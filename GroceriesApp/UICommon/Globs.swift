@@ -33,6 +33,9 @@ struct Globs{
     static let SV_REMOVE_ADDRESS = BASE_URL + "delete_delivery_address"
     static let SV_ADDRESS_LIST = BASE_URL + "delivery_address"
     
+    static let SV_MY_ORDERS_LIST = BASE_URL + "my_order"
+    static let SV_MY_ORDERS_DETAIL = BASE_URL + "my_order_detail"
+    
     static let SV_ADD_PAYMENT_METHOD = BASE_URL + "add_payment_method"
     static let SV_REMOVE_PAYMENT_METHOD = BASE_URL + "remove_payment_method"
     static let SV_PAYMENT_METHOD_LIST = BASE_URL + "payment_method"
@@ -41,6 +44,16 @@ struct Globs{
     
     static let SV_EXPLORE_LIST = BASE_URL + "explore_category_list"
     static let SV_EXPLORE_ITEMS_LIST = BASE_URL + "explore_category_items_list"
+    
+    static let SV_NOTIFICATION_LIST = BASE_URL + "notification_list"
+    static let SV_NOTIFICATION_READ_ALL = BASE_URL + "notification_read_all"
+    
+    static let SV_UPDATE_PROFILE = BASE_URL + "update_profile"
+    static let SV_CHANGE_PASSWORD = BASE_URL + "change_password"
+    
+    static let SV_FORGOT_PASSWORD_REQUEST = BASE_URL + "forgot_password_request"
+    static let SV_FORGOT_PASSWORD_VERIFY = BASE_URL + "forgot_password_verify"
+    static let SV_FORGOT_PASSWORD_SET_PASSWORD = BASE_URL + "forgot_password_set_password"
 }
 
 struct KKey {

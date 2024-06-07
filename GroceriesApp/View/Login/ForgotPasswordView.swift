@@ -1,15 +1,15 @@
 //
-//  LoginView.swift
+//  ForgotPasswordView.swift
 //  GroceriesApp
 //
-//  Created by Ferid Suleymanzade on 01.04.24.
+//  Created by Ferid Suleymanzade on 07.06.24.
 //
 
 import SwiftUI
 
-struct LoginView: View {
+struct ForgotPasswordView: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
-    @StateObject var loginVM = MainViewModel.shared;
+    @StateObject var forgotVM = ForgotPasswordViewModel.shared;
     var body: some View {
         ZStack {
             Image("bottom_bg")
@@ -25,55 +25,26 @@ struct LoginView: View {
                     .frame(width: 40)
                     .padding(.bottom, .screenWidth * 0.1)
                 
-                Text("Loging")
+                Text("Şifremi unuttum")
                     .font(.customfont(.semibold, fontSize: 26))
                     .foregroundColor(.primaryText)
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                     .padding(.bottom, 4)
                 
-                Text("Enter your emails and password ")
+                Text("Mail adresinizi giriniz")
                     .font(.customfont(.semibold, fontSize: 16))
                     .foregroundColor(.secondaryText)
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                     .padding(.bottom, .screenWidth * 0.1)
                 
-                LineTextField( title: "Email", placholder: "Enter your email address",txt: $loginVM.txtEmail, keyboardType: .emailAddress)
-                    .padding(.bottom, .screenWidth * 0.02)
+                LineTextField( title: "Email", placholder: "Enter your email address",txt: $forgotVM.txtEmail, keyboardType: .emailAddress)
+                    .padding(.bottom, .screenWidth * 0.07)
                 
-                LineSecureField(title: "Password", placholder: "Enter your password", txt: $loginVM.txtpassword, isShowPassword: $loginVM.isShowPassword)
-                    .padding(.bottom, .screenWidth * 0.02)
-                
-                NavigationLink {
-                    ForgotPasswordView()
-                } label: {
-                    Text("Forgot Password?")
-                        .font(.customfont(.medium, fontSize: 14))
-                        .foregroundColor(.primaryText)
-                }
-                .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
-                .padding(.bottom, .screenWidth * 0.03)
-                
-                RoundButton(title: "Log In") {
-                    loginVM.ServiceCallLogin()
+                RoundButton(title: "Göndermek") {
+                    forgotVM.serviceCallRequest()
                 }
                 .padding(.bottom, .screenWidth * 0.05)
                 
-                NavigationLink {
-                    SignUpView()
-                } label: {
-                    HStack {
-                        Text("Don't have an account?")
-                            .font(.customfont(.semibold, fontSize: 14))
-                            .foregroundColor(.primaryText)
-                        
-                        Text("Signup")
-                            .font(.customfont(.semibold, fontSize: 14))
-                            .foregroundColor(.primaryApp)
-                        
-                    }
-                    
-                    
-                }
                 
                 Spacer()
             }
@@ -100,9 +71,15 @@ struct LoginView: View {
             .padding(.horizontal, 20)
             
         }
-        .alert(isPresented: $loginVM.showError) {
-            Alert(title: Text(Globs.AppName), message: Text(loginVM.errorMessage), dismissButton: .default(Text("Ok") ))
+        .alert(isPresented: $forgotVM.showError) {
+            Alert(title: Text(Globs.AppName), message: Text(forgotVM.errorMessage), dismissButton: .default(Text("Ok") ))
         }
+        .background(NavigationLink(destination: OTPView(),isActive: $forgotVM.showVerify ,label: {
+            EmptyView()
+        }))
+        .background(NavigationLink(destination: ForgotPasswordSetView(),isActive: $forgotVM.showSetPassword ,label: {
+            EmptyView()
+        }))
         .background(Color.white)
         .navigationTitle("")
         .navigationBarBackButtonHidden(true)
@@ -112,8 +89,12 @@ struct LoginView: View {
     }
 }
 
-#Preview {
-    NavigationView {
-        LoginView()
+struct ForgotPasswordView_Previews: PreviewProvider {
+    static var previews: some View {
+        NavigationView {
+            ForgotPasswordView()
+        }
+      
     }
+    
 }

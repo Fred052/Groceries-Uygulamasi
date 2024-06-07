@@ -95,7 +95,9 @@ struct MyCartView: View {
         .onAppear {
             cartVm.serviceCallList()
         }
-        
+        .background(NavigationLink(destination: OrderAcceptView(), isActive: $cartVm.showOrderAccept ,label: {
+            EmptyView()
+        }))
         .alert(isPresented: $cartVm.showError, content: {
             Alert(title: Text(Globs.AppName), message: Text(cartVm.errorMessage), dismissButton: .default(Text("Ok")))
         })

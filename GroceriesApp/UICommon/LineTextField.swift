@@ -26,9 +26,8 @@ struct LineTextField: View {
                     .disableAutocorrection(true)
                     .frame(height:40)
                 
-            }
-            
             Divider()
+            }
         }
     }
 

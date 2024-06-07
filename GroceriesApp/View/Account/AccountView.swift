@@ -46,9 +46,22 @@ struct AccountView: View {
                     LazyVStack {
                         
                         VStack {
-                            AccountRow(title: "Siparişler", icon: "a_order")
                             
-                            AccountRow(title: "Hesabım", icon: "a_my_detail")
+                            
+                            NavigationLink {
+                                MyOrdersView()
+                            } label: {
+                                AccountRow(title: "Siparişlerim", icon: "a_order")
+                            }
+                            
+                            NavigationLink {
+                                MyDetailsView()
+                            } label: {
+                                AccountRow(title: "Hesabım", icon: "a_my_detail")
+                            }
+                            
+                           
+                            
                             NavigationLink {
                                 DeliveryAddressView()
                             } label: {
@@ -73,7 +86,13 @@ struct AccountView: View {
                         }
                         
                         VStack {
-                            AccountRow(title: "Bildirimler", icon: "a_noitification")
+                            
+                            NavigationLink {
+                                NotificationView()
+                            } label: {
+                                AccountRow(title: "Bildirimler", icon: "a_noitification")
+                            }
+                           
                             
                             AccountRow(title: "Yardım", icon: "a_help")
                             
